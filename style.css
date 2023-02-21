@@ -5,13 +5,13 @@ body {
 	flex-direction: column;
 	/* Importing fonts from google */
 	font-family: "Inter", sans-serif;
-	margin-left: 1rem;
-	margin-right: 1rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
 }
 /* NavBar (START) */
 .navbar-head {
+	text-align: center;
 	color: #ffffff;
-	margin-left: 2rem;
 }
 
 header {
@@ -20,9 +20,8 @@ header {
 
 /* Contains Style for Navbar */
 .navbar {
-	text-decoration: none;
-	width: auto;
-	height: auto;
+	margin-left: auto;
+	margin-right: auto;
 	text-align: justify;
 	/* for spacing the navbar*/
 	padding: 1rem;
@@ -34,19 +33,18 @@ header {
 /* The default color for navbar link */
 
 /* navbar link */
-.navbar-link-list {
-	text-align: right;
+.navbar-button-list {
+	text-align: center;
 	list-style: none;
 }
 
 /* Inline navbar link */
-.navbar-link-inline {
+.navbar-button-inline {
 	display: inline;
-	padding-right: 1rem;
 }
 
 /* Individual Link */
-.navbar-link {
+.navbar-button {
 	color: white;
 	background: transparent;
 	text-decoration: none;
@@ -54,21 +52,21 @@ header {
 }
 
 /* Unvisited Linked */
-.navbar-link-list a:link {
+.navbar-button-list a:link {
 	background-color: transparent;
 	color: #ffffff;
 	text-decoration: none;
 }
 
 /* Hovered link */
-.navbar-link-list a:hover {
+.navbar-button-list a:hover {
 	color: #ffff00;
 	background-color: transparent;
 	text-decoration: underline;
 }
 
 /* Active Link */
-.navbar-link-list .active {
+.navbar-button-list .active {
 	color: #ffff00;
 	background-color: transparent;
 	text-decoration: none;
@@ -86,7 +84,7 @@ header {
 	border-radius: 10px;
 }
 
-/* Table Data (START) */
+/* Table Data */
 .table-container {
 	align-items: center;
 }
@@ -96,11 +94,19 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	border-collapse: collapse;
-	width: 60%;
+	width: 70%;
 }
 
-td, th {
-	
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #ffe6e6;
+	color: black;
+}
+
+td,
+th {
 	border: 1px solid #ddd;
 	padding: 8px;
 }
@@ -113,10 +119,3 @@ tr:hover {
 	background-color: #ddd;
 }
 
-th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: left;
-	background-color: #ffe6e6;
-	color: black;
-}
