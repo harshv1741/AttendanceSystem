@@ -1,7 +1,5 @@
 const button = document.querySelector("#export");
 
-function downloadPDFWithBrowserPrint() {
+button.addEventListener("click", () => {
 	window.print();
-}
-
-button.addEventListener("click", downloadPDFWithBrowserPrint());
+});
