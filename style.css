@@ -7,6 +7,8 @@
 }
 
 .heading{
+	margin: 0 auto 0 auto;
+	max-width: 600px;
 	text-align: center;
 	padding: 1rem;
 	background-color: #FF471A;
@@ -20,8 +22,7 @@
 
 table {
 	overflow-x: auto;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto 0 auto;
 	border-collapse: collapse;
 	width: 60%;
 }
