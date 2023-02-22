@@ -4,16 +4,17 @@
 	font-family: "Inter", sans-serif;
 }
 
-/* NavBar (START) */
-.navbar-head {
-	text-align: center;
-	color: #ffffff;
+header{
+	display: block;
+	border-collapse: collapse;
 }
 
+/* NavBar (START) */
 
 /* Contains Style for Navbar */
 .navbar {
-	text-align: justify;
+	margin-left: auto;
+	margin-right: auto;
 	/* for spacing the navbar*/
 	padding: 1rem;
 	/* border-radius: For Rounded Corners */
@@ -21,53 +22,8 @@
 	background-color: #ff471a;
 }
 
-/* The default color for navbar link */
-
-/* navbar link */
-.navbar-button-list {
-	text-align: center;
-	list-style: none;
-}
-
-/* Inline navbar link */
-.navbar-button-inline {
-	display: inline;
-}
-
-/* Individual Link */
-.navbar-button {
-	color: white;
-	background: transparent;
-	text-decoration: none;
-	transition-duration: 0.6s;
-}
-
-/* Unvisited Linked */
-.navbar-button-list a:link {
-	background-color: transparent;
-	color: #ffffff;
-	text-decoration: none;
-}
-
-/* Hovered link */
-.navbar-button-list a:hover {
-	color: #ffff00;
-	background-color: transparent;
-	text-decoration: underline;
-}
-
-/* Active Link */
-.navbar-button-list .active {
-	color: #ffff00;
-	background-color: transparent;
-	text-decoration: none;
-}
-/* NavBar (END) */
 
 
-.navbar {
-	border-radius: 10px;
-}
 
 /* Table Data */
 .table-container {
@@ -80,7 +36,7 @@ table {
 	margin-left: auto;
 	margin-right: auto;
 	border-collapse: collapse;
-	width: 70%;
+	width: 60%;
 }
 
 th {
