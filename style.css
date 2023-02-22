@@ -2,16 +2,15 @@
 
 :root{
 	font-family: "Inter", sans-serif;
-	display: flex;
-	flex-direction: column;
+	text-align: center;
 }
 
-.heading{
-	margin: 0 auto 0 auto;
-	max-width: 700px;
-	text-align: center;
-	padding: 1rem;
-	background-color: #FF471A;
+.title {
+  background: #FF471A;
+  border-radius: 2rem;
+  color: white;
+  padding: 1rem;
+  margin: 2rem;
 }
 
 /* Table Data */
@@ -30,7 +29,6 @@ table {
 th {
 	padding-top: 12px;
 	padding-bottom: 12px;
-	text-align: left;
 	background-color: #ffe6e6;
 	color: black;
 }
@@ -49,3 +47,19 @@ tr:hover {
 	background-color: #ddd;
 }
 
+/* Export Button */
+.export-container{
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+#export{
+	background: transparent;
+	padding: 12px 24px;
+	transition-duration: 0.4s;
+}
+#export:hover{
+	background-color: black;
+	color: white;
+}

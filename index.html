@@ -8,12 +8,12 @@
 		<title>Home</title>
 	</head>
 	<body>
-		<div class="heading">
-			<h2>Attendance Management</h2>
+		<div class="title">
+			<h2>Attendance</h2>
 		</div>
 
 		<div class="table-container">
-			<table>
+			<table id="labortable">
 				<tr>
 					<th scope="col">Name</th>
 					<th scope="col">Phone Number</th>
@@ -23,24 +23,24 @@
 				</tr>
 				<tr>
 					<td>Alfreds Futterkiste</td>
-					<td>+91 8833993399</td>
-					<td>220/-</td>
-					<td>yes</td>
+					<td>8833993399</td>
 					<td>no</td>
+					<td>yes</td>
+					<td>200</td>
 				</tr>
 				<tr>
 					<td>Berglunds snabbköp</td>
-					<td>Christina Berglund</td>
-					<td>Sweden</td>
-				</tr>
-				<tr>
-					<td>Ernst Handel</td>
-					<td>Roland Mendel</td>
-					<td>Austria</td>
+					<td>7499817784</td>
+					<td>yes</td>
+					<td>no</td>
+					<td>200</td>
 				</tr>
 			</table>
 		</div>
-
+		<div class="export-container">
+			<button name="export" id="export" type="submit">Export To PDF</button>
+		</div>
+		
 		<script type="text/javascript" src="index.js"></script>
 	</body>
 </html>
