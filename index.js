@@ -1,8 +1,15 @@
-// const { default: jsPDF } = require("jspdf");
+const date = new Date();
+
+let day = date.getDate();
+let month = date.getMonth() + 1; // since month indexing starts from 0
+let year = date.getFullYear();
+let currentDate = `${day}-${month}-${year}`;
+console.log(currentDate); // "17-6-2022"
 
 const button = document.querySelector("#export");
 
 button.addEventListener("click", () => {
+    
      var doc = new jsPDF("p", "pt", "a4");
 			var htmlstring = "";
 			var tempVarToCheckPageHeight = 0;
@@ -30,5 +37,5 @@ button.addEventListener("click", () => {
 				startY: 70,
 				theme: "grid",
 			});
-			doc.save("Marks_Of_Students.pdf");
+			doc.save(`Labor-Attendance (${currentDate}).pdf`);
 })
