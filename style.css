@@ -1,27 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-body {
-	display: flex;
-	flex-direction: column;
-	/* Importing fonts from google */
+:root{
 	font-family: "Inter", sans-serif;
-	margin-left: 3rem;
-	margin-right: 3rem;
 }
+
 /* NavBar (START) */
 .navbar-head {
 	text-align: center;
 	color: #ffffff;
 }
 
-header {
-	margin: 1rem;
-}
 
 /* Contains Style for Navbar */
 .navbar {
-	margin-left: auto;
-	margin-right: auto;
 	text-align: justify;
 	/* for spacing the navbar*/
 	padding: 1rem;
@@ -72,13 +63,7 @@ header {
 	text-decoration: none;
 }
 /* NavBar (END) */
-.table-container {
-	margin: 3rem;
-}
 
-.navbar-container {
-	margin: 0.8rem;
-}
 
 .navbar {
 	border-radius: 10px;
@@ -86,11 +71,12 @@ header {
 
 /* Table Data */
 .table-container {
+	margin-top: 3rem;
 	align-items: center;
 }
 
 table {
-	display: flex;
+	overflow-x: auto;
 	margin-left: auto;
 	margin-right: auto;
 	border-collapse: collapse;
