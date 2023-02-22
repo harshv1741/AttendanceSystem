@@ -2,32 +2,19 @@
 
 :root{
 	font-family: "Inter", sans-serif;
+	display: flex;
+	flex-direction: column;
 }
 
-header{
-	display: block;
-	border-collapse: collapse;
-}
-
-/* NavBar (START) */
-
-/* Contains Style for Navbar */
-.navbar {
-	margin-left: auto;
-	margin-right: auto;
-	/* for spacing the navbar*/
+.heading{
+	text-align: center;
 	padding: 1rem;
-	/* border-radius: For Rounded Corners */
-	border-radius: 1rem;
-	background-color: #ff471a;
+	background-color: #FF471A;
 }
-
-
-
 
 /* Table Data */
 .table-container {
-	margin-top: 3rem;
+	margin: 3rem 0 3rem 0;
 	align-items: center;
 }
 
