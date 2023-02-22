@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
 
-:root{
+:root {
 	font-family: "Inter", sans-serif;
 	text-align: center;
 }
 
 .title {
-  background: #FF471A;
-  border-radius: 2rem;
-  color: white;
-  padding: 1rem;
-  margin: 2rem;
+	background: #ff471a;
+	border-radius: 2rem;
+	color: white;
+	padding: 1rem;
+	margin: 2rem;
 }
 
 /* Table Data */
@@ -21,7 +21,7 @@
 
 table {
 	overflow-x: auto;
-	margin: 0 auto 0 auto;
+	margin: 2rem auto 2rem auto;
 	border-collapse: collapse;
 	width: 60%;
 }
@@ -48,18 +48,29 @@ tr:hover {
 }
 
 /* Export Button */
-.export-container{
-	display: flex;
-	justify-content: center;
-  	align-items: center;
-}
 
-#export{
+#export {
+	border-radius: 10px;
 	background: transparent;
 	padding: 12px 24px;
 	transition-duration: 0.4s;
 }
-#export:hover{
+#export:hover {
 	background-color: black;
 	color: white;
+}
+
+
+/* Date Selector */
+
+#dateSelector {
+	border-radius: 10px;
+	background: transparent;
+	padding: 12px 24px;
+	transition-duration: 0.4s;
+}
+
+#dateSelector:hover {
+	background-color: aqua;
+	color: black;
 }

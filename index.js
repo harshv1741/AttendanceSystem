@@ -4,12 +4,11 @@ let day = date.getDate();
 let month = date.getMonth() + 1; // since month indexing starts from 0
 let year = date.getFullYear();
 let currentDate = `${day}-${month}-${year}`;
-console.log(currentDate); // "17-6-2022"
+console.log("Today's Date", currentDate); // "17-6-2022"
 
 const button = document.querySelector("#export");
 
 button.addEventListener("click", () => {
-    
      var doc = new jsPDF("p", "pt", "a4");
 			var htmlstring = "";
 			var tempVarToCheckPageHeight = 0;
