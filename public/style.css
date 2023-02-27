@@ -1,0 +1,34 @@
+.table-container {
+	margin: 3rem 0 3rem 0;
+	align-items: center;
+}
+
+table {
+	align-items: center;
+	overflow-x: auto;
+	overflow-y: auto;
+	margin: 2rem auto 2rem auto;
+	border-collapse: collapse;
+	width: 70%;
+}
+
+tr {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background-color: #ffe6e6;
+	color: black;
+}
+
+th,
+td {
+	border: 1px solid #ddd;
+	padding: 4px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
