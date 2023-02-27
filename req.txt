@@ -1,0 +1,3 @@
+1. Make Exportable Table.
+2. Calculate daily wages according to day.
+3. Calculate total expense.
