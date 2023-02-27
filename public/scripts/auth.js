@@ -79,8 +79,10 @@ async function loginWithGoogle() {
 	try {
 		var provider = new firebase.auth.GoogleAuthProvider();
 		const result = firebase.auth().signInWithPopup(provider);
-		console.log(result);
+		M.toast({ html: `welcome ${result.user.email}`, classes: "green" });
+		createUserCollection(result);
 	} catch (err) {
 		console.log(err);
+		M.toast({ html: err.message, classes: "red" });
 	}
 }
