@@ -1,7 +1,7 @@
 {
   "name": "attendancesystem",
   "version": "1.0.0",
-  "description": "My Design on Attendance system",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/harshv1741/AttendanceSystem/issues"
   },
-  "homepage": "https://github.com/harshv1741/AttendanceSystem#readme",
-  "dependencies": {
-    "jspdf": "^2.5.1"
-  }
+  "homepage": "https://github.com/harshv1741/AttendanceSystem#readme"
 }
