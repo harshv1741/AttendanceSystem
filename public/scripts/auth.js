@@ -61,7 +61,10 @@ function logout() {
 // Listener function for auth state changed
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
-		console.log(user);
+		document.querySelector("#login").style.display = "none";
+		document.querySelector("#signup").style.display = "none";
+		document.querySelector("#logout").style.display = "block";
+		// console.log(user);
 		getUserInfoRealtime(user.uid);
 		if(user.uid == "tsWtvG6iSSPRaYaqv47yJYXVaG73"){
 			allUserDetails();
@@ -69,6 +72,9 @@ firebase.auth().onAuthStateChanged((user) => {
 	} else {
 		getUserInfoRealtime(null);
 		document.querySelector(".title").innerHTML = 'Welcome To Attendance System';
+		document.querySelector("#logout").style.display = "none";
+		document.querySelector("#login").style.display = "block";
+		document.querySelector("#signup").style.display = "block";
 		document.querySelector("#user").style.display = 'none';
 		document.querySelector("#allUser").style.display='none';
 	}
