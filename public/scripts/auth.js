@@ -1,8 +1,6 @@
-const userDetails = document.querySelector(".userDetails");
-const title = document.querySelector(".title")
+const title = document.querySelector(".title");
 const msg = document.querySelector(".msg");
-const editProfile = document.querySelector("#editProfile");
-let unsubscribe
+let unsubscribe;
 const myModal = document.querySelectorAll(".modal");
 
 // Signup Event
@@ -19,14 +17,14 @@ async function signup(e) {
 			displayName: "User",
 		});
 		createUserCollection(result.user);
-		// await result.user.sendEmailVerification();
+		await result.user.sendEmailVerification();
 		console.log(result);
-		M.toast({ html: `welcome ${result.user.email}`, classes: "green" });
+		M.toast({ html: `An Email is sent to you for verification`, classes: "green" });
 	} catch (err) {
 		console.log(err);
 		M.toast({ html: err.message, classes: "red" });
 	}
-	email.value = "";	
+	email.value = "";
 	password.value = "";
 	M.Modal.getInstance(myModal[0]).close();
 }
@@ -66,17 +64,15 @@ firebase.auth().onAuthStateChanged((user) => {
 		document.querySelector("#logout").style.display = "block";
 		// console.log(user);
 		getUserInfoRealtime(user.uid);
-		if(user.uid == "tsWtvG6iSSPRaYaqv47yJYXVaG73"){
-			allUserDetails();
-		}
+		allDataDetails();
 	} else {
 		getUserInfoRealtime(null);
-		document.querySelector(".title").innerHTML = 'Welcome To Attendance System';
+		document.querySelector(".title").innerHTML = "Welcome To Attendance System";
 		document.querySelector("#logout").style.display = "none";
 		document.querySelector("#login").style.display = "block";
 		document.querySelector("#signup").style.display = "block";
-		document.querySelector("#user").style.display = 'none';
-		document.querySelector("#allUser").style.display='none';
+		document.querySelector("#user").style.display = "none";
+		document.querySelector("#allData").style.display = "none";
 	}
 });
 
@@ -86,10 +82,9 @@ async function loginWithGoogle() {
 		var provider = new firebase.auth.GoogleAuthProvider();
 		const result = firebase.auth().signInWithPopup(provider);
 		M.toast({ html: `welcome ${result.user.email}`, classes: "green" });
-		createUserCollection(result);
+		createUserCollection(result.user);
 	} catch (err) {
 		console.log(err);
 		M.toast({ html: err.message, classes: "red" });
-
 	}
 }
