@@ -64,6 +64,8 @@
 			</div>
 		</div>
 
+		<!-- Modal Collection (START) -->
+		
 		<!-- Login Modal -->
 		<div id="modal2" class="modal">
 			<div class="modal-content">
@@ -72,8 +74,8 @@
 					<input type="email" id="loginEmail" placeholder="email" />
 					<input type="password" id="loginPassword" placeholder="password" />
 					<button
-						class="btn waves-effect #ef6c00 orange darken-3"
-						type="submit"
+					class="btn waves-effect #ef6c00 orange darken-3"
+					type="submit"
 					>
 						Submit
 					</button>
@@ -82,75 +84,141 @@
 						style="margin-top: 0.5rem"
 						onclick="loginWithGoogle()"
 						type="submit"
-					>
+						>
 						Login With Google
 					</button> -->
 				</form>
 			</div>
 		</div>
 		
-		<!-- Edit Modal -->
+		<!-- Edit Modal for Logged In User -->
 		<div id="modal3" class="modal">
 			<div class="modal-content">
 				<h4>Edit Your Details</h4>
 				<form id="editProfile" onsubmit="updateUserProfile(event)">
 					<input type="text" name="name" placeholder="Name" />	
-					<input type="number" name="phoneNumber" placeholder="Phone Number" />
-					<input type="email" name="email" placeholder="Email" />
-					<input type="text" name="attendance" placeholder="Persent/Absent"/>
-					<!-- <input type="number" name="Wages" placeholder="Wages" /> -->
 					<button
+					class="btn waves-effect #ef6c00 orange darken-3"
+					type="submit"
+					>
+					Submit
+				</button>
+				</form>
+			</div>
+		</div>
+		
+		<!-- Add Modal For Adding Data -->
+		<div id="modal4" class="modal">
+			<div class="modal-content">
+				<h4>Add Details</h4>
+				<form id="addProfile" onsubmit="addDataProfile(event)">
+					<input type="text" name="firstname" placeholder="First Name" />
+					<input type="text" name="lastname" placeholder="Last Name" />
+					<input type="number" name="phoneNumber" placeholder="Phone Number" />
+					<input type="text" name="attendance" placeholder="Persent(P)/Absent(A)"/>
+					<input type="number" name="wages" placeholder="Wages" />
+						<button
 						class="btn waves-effect #ef6c00 orange darken-3"
 						type="submit"
-					>
-						Submit
+						>
+						Add
 					</button>
 				</form>
 			</div>
 		</div>
+		
+		<!-- Update Modal for Editing Data -->
+		<div id="modal5" class="modal">
+			<div class="modal-content">
+				<h4>Edit Your Details</h4>
+				<form id="updateProfile" onsubmit="updateDataProfile(event)">
+					<input type="text" name="id" placeholder="ID" />
+					<input type="text" name="firstname" placeholder="First Name" />
+					<input type="text" name="lastname" placeholder="Last Name" />
+					<input type="number" name="phoneNumber" placeholder="Phone Number" />
+					<input type="text" name="attendance" placeholder="Persent(P)/Absent(A)"/>
+					<input type="number" name="wages" placeholder="Wages" />
+						<button
+						class="btn waves-effect #ef6c00 orange darken-3"
+						type="submit"
+						>
+						Update
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Delete Modal for Editing Data -->
+		<div id="modal6" class="modal">
+			<div class="modal-content">
+				<h4>Enter the ID of person you want to delete</h4>
+				<form id="deleteProfile" onsubmit="deleteDataProfile(event)">
+					<input type="text" name="id" placeholder="ID" />
+						<button
+						class="btn waves-effect #ef6c00 orange darken-3"
+						type="submit"
+						>
+						Delete
+					</button>
+				</form>
+			</div>
+		</div>
+
+		<!-- Modal Collection (END) -->
+
 
 		<!-- Title Tab -->
 		<h3 class="title center">Welcome To Attendance System </h3>
 		<h5>
 			<p class="msg center">Click on menu icon to login</p>
 		</h5>
-
-
+		
+		
 		<!-- Current User Table -->
 		<div id="user" class="table-container">
-				<table>
-					<tr>
-						<th scope="col">Name</th>
-						<th scope="col">Phone</th>
-						<th scope="col">Email</th>
-						<th scope="col">Action</th>
-					</tr>
-					<tr class="userDetails" scope="row"></tr>
-				</table>
+			<table>
+				<tr>
+					<th scope="col">Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Action</th>
+				</tr>
+				<tr class="userDetails" scope="row"></tr>
+			</table>
 		</div>
 
 		<!-- All User Table -->
-		<div id="allUser" style="display: none;" class="table-container center">
+		<div id="allData" style="display: none;" class="table-container center">
+			<br>
+			<h4>Attendance Table</h4>
 			<table id="Attendance-Table">
 				<thead>
 					<tr>
+						<th scope="col">Id</th>
 						<th scope="col">Name</th>
-						<th scope="col">Phone</th>
-						<th scope="col">Email</th>
 						<th scope="col">Date</th>
+						<th scope="col">Phone</th>
 						<th scope="col">Present/Absent</th>
 						<th scope="col">Wages</th>
 					</tr>
 				</thead>
-				<tbody id="userData">
+				<tbody id="userData" scope="row">
 				</tbody>
 			</table>
+			<button	class="btn waves-effect #69f0ae green accent-2 modal-trigger" href="#modal4" >
+                <i class="material-icons">add</i>
+			</button>
+			<button	class="btn waves-effect #1e88e5 blue darken-1 modal-trigger" href="#modal5" >
+				<i class="material-icons">edit</i>
+			</button>
+			<button	class="btn waves-effect #c62828 red darken-3 modal-trigger" href="#modal6" >
+				<i class="material-icons">delete</i>
+			</button>
 			<button id="export" class="btn waves-effect" type="submit">Export To PDF</button>
 		</div>
 		
 		
-
-
+		
+		
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<!-- Script to Start navbar -->
@@ -159,17 +227,17 @@
 				var elems = document.querySelectorAll(".modal");
 				var instances = M.Modal.init(elems);
 			});
-
+			
 			$(document).ready(function () {
 				$(".dropdown-trigger").dropdown();
 			});
-		</script>
+			</script>
 
 		<!-- PDF Export APT Scripts (START) -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.6/jspdf.plugin.autotable.min.js"></script>
 		<!-- PDF Export APT Scripts (END) -->
-
+		
 		<!-- The Core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
@@ -186,8 +254,8 @@
 				appId: "1:619559811288:web:e5430fee363ba59ef0ffad",
 				measurementId: "G-B70M5Y8NLB",
 			};
-
-
+			
+			
 			// Initialize Firebase
 			firebase.initializeApp(firebaseConfig);
 		</script>
