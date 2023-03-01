@@ -34,9 +34,9 @@ async function getUserInfoRealtime(userID) {
 				const userInfo = doc.data();
 
 				if (userInfo) {
-					document.querySelector("#user").style.display = "block";
+					document.querySelector("#user").style.display = "none";
 					document.querySelector(".msg").style.display = "none";
-					document.querySelector(".title").innerHTML = `Your Info`;
+					document.querySelector(".title").innerHTML = ``;
 					userDetails.innerHTML = `
                     <td>${userInfo.name}</td>
                     <td>${userInfo.email}</td>  
